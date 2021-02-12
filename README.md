@@ -10,5 +10,5 @@ $ make
 ```
 ### Post building, you need to set a path for gazebo to know where to check your plugin too.
 ```
-$ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/workspace/myrobot/build
+$ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/path_to_build_directory/build
 ```
