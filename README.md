@@ -2,7 +2,9 @@
 For all things Simulation
 
 ### Building is necessary to make the plugin work.
-#### After making a build directory use the following commands to build
+* Make a directory names as build `mkdir build`
+* Build directory can be located on the same level as CMakeLists.txt
+* After making a build directory, open it `cd build`, then use the following commands to build
 
 ```
 $ cmake ../
