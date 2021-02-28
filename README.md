@@ -3,6 +3,7 @@ Repository containing different projects involving any kind of robotic simulatio
 
 ## Table of contents
 * [Project 1](#Project-1)
+* [Project 2 (Chase White ball)](#Project-2) 
 ## Project 1
 ##### Spawning a simple three wheeled robot in a simulation environment.
 ### Build and compile
@@ -21,3 +22,13 @@ $ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/path_to_build_directory/
 ```
 ### Run
 * Use the command `gazebo worldSubmit1` to run the simulation
+
+## Project 2
+##### Chasing a white colored ball in gazebo simulation by using camera feed.
+### Setup and compile
+* First the two packages `my_robot` and `ball_chaser` are to be made in src folder of your catkin workspace.
+* Then use `catkin_make` in one level before your `src` directory of catkin workspace to build all the executables according to instructions in `CMakeLists.txt` files. 
+### Run
+* Use the commands `roslaunch my_robot world.launch` and `roslaunch ball_chaser ball_chasr.launch` to run the simulation and move around the ball to test.
+### NOTE:
+* Play around with torque and velocity values to get smooth turning for different wheel joint coordinates of robot.
