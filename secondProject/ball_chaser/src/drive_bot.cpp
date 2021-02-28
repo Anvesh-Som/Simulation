@@ -8,10 +8,11 @@ bool handle_drive_request(ball_chaser::DriveToTarget::Request &req, ball_chaser:
 {
 	
         geometry_msgs::Twist robo_vel;
-        robo_vel.linear.x = req.linear_x;
+        robo_vel.linear.x = req.linear_x; //passing the velocity requested by the client to service file variables
         robo_vel.angular.z = req.angular_z;
-        motor_command_publisher.publish(robo_vel);
-	res.msg_feedback="Velocity given to chassis: Linear ="+ std::to_string(robo_vel.linear.x) + " Angular ="+ std::to_string(robo_vel.angular.z);
+        motor_command_publisher.publish(robo_vel); //publishing the velocities to /cmd_vel topic
+        //Setting up the service response variable
+	res.msg_feedback="Velocity given to chassis: Linear ="+ std::to_string(robo_vel.linear.x) + " Angular ="+ std::to_string(robo_vel.angular.z); 
 }
 
 int main(int argc, char** argv)
