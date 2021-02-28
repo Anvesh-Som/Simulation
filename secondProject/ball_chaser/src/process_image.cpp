@@ -29,26 +29,29 @@ void process_image_callback(const sensor_msgs::Image img)
     {
 	for(int j=0;j<img.step;j++)
         {
-            if(img.data[(i*img.step)+j]==desired_pixel)
+            if(img.data[(i*img.step)+j]==desired_pixel) //to check if any of rbg value is 255
             {
-                spotted_counter++;
-//		ROS_INFO("White Spotted");
+                if(img.data[(i*img.step)+j+1] == desired_pixel && img.data[(i*img.step)+j+2] == desired_pixel) //to check if value of it's successive ones are 255 too.
+                {
+                    spotted_counter++;
+//                  ROS_INFO("White Spotted");
     // Depending on the white ball position, call the drive_bot function and pass velocities to it
-                if(j<=(img.step/3))
-                {
-                    drive_robot(0.0,1.0);
-		    goto TIME_TO_UPATE;
-		}
-                if(j>(img.step/3) && j<(2*img.step/3))
-                {
-                    drive_robot(5.0,0.0);
-		    goto TIME_TO_UPATE;
-		}
-                if(j>=(2*img.step/3))
-                {
-                    drive_robot(0.0,-1.0);
-		    goto TIME_TO_UPATE;
-		}
+                    if(j<=(img.step/3))
+                    {
+                        drive_robot(0.0,1.0); //left turn
+                        goto TIME_TO_UPATE;
+                    }
+                    if(j>(img.step/3) && j<(2*img.step/3))
+                    {
+                        drive_robot(5.0,0.0); //forward move
+                        goto TIME_TO_UPATE;
+                    }
+                    if(j>=(2*img.step/3))
+                    {
+                        drive_robot(0.0,-1.0); //right turn
+                        goto TIME_TO_UPATE;
+                    }   
+                }            
             }
         }
     }
@@ -56,7 +59,7 @@ void process_image_callback(const sensor_msgs::Image img)
     {
         drive_robot(0.0,0.0); //to stop if no white found
     }
-    TIME_TO_UPATE: ;
+    TIME_TO_UPATE: ; //updates image by breaking out of loop if white is found.
 //    ROS_INFO("============IMAGE UPDATED===========");
 }
 
