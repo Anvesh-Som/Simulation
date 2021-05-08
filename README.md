@@ -3,7 +3,8 @@ Repository containing different projects involving any kind of robotic simulatio
 
 ## Table of contents
 * [Project 1](#Project-1)
-* [Project 2 (Chase White ball)](#Project-2) 
+* [Project 2 (Chase White pixel)](#Project-2) 
+* [Project 3 (MCL localization)](#Project-3)
 ## Project 1
 ##### Spawning a simple three wheeled robot in a simulation environment.
 ### Build and compile
@@ -32,3 +33,6 @@ $ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/path_to_build_directory/
 * Use the commands `roslaunch my_robot world.launch` and `roslaunch ball_chaser ball_chasr.launch` to run the simulation and move around the ball to test.
 ### NOTE:
 * Play around with torque and velocity values to get smooth turning for different wheel joint coordinates of robot.
+
+## Project 3
+![Image alt text](thirdProject/Update_0.png?raw=true "Particles after initial pose estimation")
