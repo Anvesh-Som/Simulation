@@ -35,4 +35,17 @@ $ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/path_to_build_directory/
 * Play around with torque and velocity values to get smooth turning for different wheel joint coordinates of robot.
 
 ## Project 3
+* Particles after initial pose estimation
 ![Image alt text](thirdProject/Update_0.png?raw=true "Particles after initial pose estimation")
+
+
+* Particles after 1  update
+![Image alt text](thirdProject/Update_1.png?raw=true "Particles after 1  update")
+
+
+* Particles after 6  updates
+![Image alt text](thirdProject/Update_6.png?raw=true "Particles after 6  updates")
+
+
+* Particles after 30-40  updates
+![Image alt text](thirdProject/Update_30-40.png?raw=true "Particles after 30-40  update")
