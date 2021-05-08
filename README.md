@@ -35,6 +35,8 @@ $ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/path_to_build_directory/
 * Play around with torque and velocity values to get smooth turning for different wheel joint coordinates of robot.
 
 ## Project 3
+##### Observing behaviour of MCL in RViz while tweaking different parameters in AMCL package.
+
 * Particles after initial pose estimation
 ![Image alt text](thirdProject/Update_0.png?raw=true "Particles after initial pose estimation")
 
