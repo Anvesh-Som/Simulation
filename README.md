@@ -5,6 +5,7 @@ Repository containing different projects involving any kind of robotic simulatio
 * [Project 1](#Project-1)
 * [Project 2 (Chase White pixel)](#Project-2) 
 * [Project 3 (MCL localization)](#Project-3)
+* [Project 4 (RTAB Map)](#Project-4)
 ## Project 1
 ##### Spawning a simple three wheeled robot in a simulation environment.
 ### Build and compile
@@ -51,3 +52,18 @@ $ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/path_to_build_directory/
 
 * Particles after 30-40  updates
 ![Image alt text](thirdProject/Update_30-40.png?raw=true "Particles after 30-40  update")
+
+## Project 4
+##### Making a map using Real-Time Apearance Based Mapping (RTAB Map). 
+##### Link to database files(result + exported 3D Map). 
+
+* The yellow dots (in the cube figure) are showing distinct features. (below occupancy grip)
+![Image alt text](fourthProject/map_screenshots/databaseViewerShowingFeatures.png?raw=true "databaseViewerShowingFeatures")
+
+
+* Figures shows the resultant map in RViz in a slanted side view.
+![Image alt text](fourthProject/map_screenshots/RvizMapSlantView.png?raw=true "RvizMapSlantView")
+
+
+* Figures shows the resultant map in RViz in top view.
+![Image alt text](fourthProject/map_screenshots/RvizMapTopView.png?raw=true "RvizMapTopView")
