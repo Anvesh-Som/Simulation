@@ -6,6 +6,7 @@ Repository containing different projects involving any kind of robotic simulatio
 * [Project 2 (Chase White pixel)](#Project-2) 
 * [Project 3 (MCL localization)](#Project-3)
 * [Project 4 (RTAB Map)](#Project-4)
+* [Project 5 (Home Service)](#Project-5)
 ## Project 1
 ##### Spawning a simple three wheeled robot in a simulation environment.
 ### Build and compile
@@ -67,3 +68,5 @@ $ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/path_to_build_directory/
 
 * Figures shows the resultant map in RViz in top view.
 ![Image alt text](fourthProject/map_screenshots/RvizMapTopView.png?raw=true "RvizMapTopView")
+
+## Project 5
