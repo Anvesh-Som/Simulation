@@ -71,7 +71,12 @@ $ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/path_to_build_directory/
 
 ## Project 5
 ### Writeup:-
-In this project we used all the previous knowledge of all previous courses to make a robot capable of mapping and localizing simultaneously (SLAM) in order to pick up virtual objects and drop them off at a given position.
+* In this project we used all the previous knowledge of all previous courses to make a robot capable of mapping and localizing simultaneously (SLAM) in order to pick up virtual objects and drop them off at a given position.
+* Official repos of turtlebot3 were used to obtain this functionality along with "self made" nodes to pick and place virtual objects.
+* Changes have been done to official repos of turtlebot3 and turtlebot3_simulations in order to run mapping and localization on our world and later on our map (pick and place)
+* For navigation, ROS Navigation stack was used.
+* The ROS navigation stack creates a path for our robot based on Dijkstra's algorithm, a variant of the Uniform Cost Search algorithm, while avoiding obstacles on its path.
+* Shell scripts have been made to run different nodes via xterm.
 
 ## NOTE:- 
 * Please change paths from `/home/anvesh/simulation_ws` to your `catkin_workspace` in all scripts and launch files because they were aked to be kept outside packages (example maps folder) could not be given a general path by find command.
