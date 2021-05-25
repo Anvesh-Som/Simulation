@@ -70,6 +70,8 @@ $ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/path_to_build_directory/
 ![Image alt text](fourthProject/map_screenshots/RvizMapTopView.png?raw=true "RvizMapTopView")
 
 ## Project 5
+### Writeup:-
+In this project we used all the previous knowledge of all previous courses to make a robot capable of mapping and localizing simultaneously (SLAM) in order to pick up virtual objects and drop them off at a given position.
 
 ## NOTE:- 
 * Please change paths from `/home/anvesh/simulation_ws` to your `catkin_workspace` in all scripts and launch files because they were aked to be kept outside packages (example maps folder) could not be given a general path by find command.
