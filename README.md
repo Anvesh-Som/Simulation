@@ -70,3 +70,8 @@ $ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/path_to_build_directory/
 ![Image alt text](fourthProject/map_screenshots/RvizMapTopView.png?raw=true "RvizMapTopView")
 
 ## Project 5
+* Figures shows the robot going to pick virtual object.
+![Image alt text](fifthProject/src/media/going_to_pick.png?raw=true "GoingToPick")
+
+* Figures shows the robot going to drop after picking up.
+![Image alt text](fifthProject/src/media/started_moving_to_drop.png?raw=true "started move")
