@@ -25,6 +25,6 @@
   <!-- rviz -->
   <group if="$(arg open_rviz)"> 
     <node pkg="rviz" type="rviz" name="rviz" required="true"
-	      args="-d /home/anvesh/simulation_ws/src/rvizConfig/final_rviz.rviz"/>
+	      args="-d $(find rvizConfig)/final_rviz.rviz"/>
   </group>
 </launch>
