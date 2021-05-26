@@ -8,8 +8,8 @@
 
 # 1) export the model of turtlebot and other environment variables => 
 export TURTLEBOT3_MODEL=waffle
-export TURTLEBOT_WORLD="/home/anvesh/simulation_ws/src/map/last_world.world"
-export TURTLEBOT_MAP_FILE="/home/anvesh/simulation_ws/src/map/map.yaml"
+export TURTLEBOT_WORLD="$(rospack find map)/last_world.world"
+export TURTLEBOT_MAP_FILE="$(rospack find map)/map.yaml"
 
 
 

@@ -5,8 +5,8 @@
 #Hence There are some additional things need to be done which aren't asked in the course
 # 1) export the model of turtlebot and other environment variables => 
 export TURTLEBOT3_MODEL=waffle
-export TURTLEBOT_WORLD="/home/anvesh/simulation_ws/src/map/last_world.world"
-export TURTLEBOT_MAP_FILE="/home/anvesh/simulation_ws/src/map/map.yaml"
+export TURTLEBOT_WORLD="$(rospack find map)/last_world.world"
+export TURTLEBOT_MAP_FILE="$(rospack find map)/map.yaml"
 # then the following are already sourced in my personal Linux installation (PLEASE DO SOURCE MANUALLY FIRST)) 
 #	source /opt/ros/melodic/setup.bash
 #	source /path/to/catkin_workspace/devel/setup.bash
@@ -21,4 +21,14 @@ sleep 5
 
 #add markers node: adds virtual objects
 xterm -e "source simulation_ws/devel/setup.bash;
-rosrun add_markers add_markers"
+rosrun add_markers add_markers" &
+sleep 10
+
+# in case when only add_markers node is running and not together with pick_onjects
+xterm -e "rosparam set only_add_markers true" &
+sleep 5
+
+xterm -e "rosparam set is_at_1st_pose true" &
+sleep 5
+
+xterm -e "rosparam set is_at_2nd_pose true"

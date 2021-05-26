@@ -5,8 +5,8 @@
 #Hence There are some additional things need to be done which aren't asked in the course
 # 1) export the model of turtlebot and other environment variables => 
 export TURTLEBOT3_MODEL=waffle
-export TURTLEBOT_WORLD="/home/anvesh/simulation_ws/src/map/last_world.world"
-export TURTLEBOT_MAP_FILE="/home/anvesh/simulation_ws/src/map/map.yaml"
+export TURTLEBOT_WORLD="$(rospack find map)/last_world.world"
+export TURTLEBOT_MAP_FILE="$(rospack find map)/map.yaml"
 # then the following are already sourced in my personal Linux installation (PLEASE DO SOURCE MANUALLY FIRST)) 
 #	source /opt/ros/melodic/setup.bash
 #	source /path/to/catkin_workspace/devel/setup.bash
