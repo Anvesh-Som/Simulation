@@ -10,8 +10,28 @@ int main( int argc, char** argv )
 	ros::Rate r(1);
 	ros::Publisher marker_pub = n.advertise<visualization_msgs::Marker>("visualization_marker", 1);
 
-	bool is_at_1st_pose = false, is_at_2nd_pose = false;
+ 	ros::NodeHandle nh;
+        nh.setParam("only_add_markers", false); //to run this node independent of pick_objects too if we want
+	bool pickup_started = false; //to know if pick_objects node started
+	bool only_add_markers =  false;
+	while(1) //waits till either add_markers.sh script changed parameter or pick_objects node started and changed parameters to true.
+	{
+	nh.getParam("pickup_started",pickup_started);
+	nh.getParam("only_add_markers",only_add_markers);
+		if(pickup_started == true || only_add_markers == true)
+		{
+			break;
+		}
+	}
 
+if(only_add_markers ==  true ) //running this node standalone
+{
+	nh.setParam("is_at_1st_pose",false);
+	nh.setParam("is_at_2nd_pose",false);
+}
+
+	bool is_at_1st_pose = false, is_at_2nd_pose = false;
+	
 	// Set shape type to be a cube
 	visualization_msgs::Marker marker;
 	marker.header.frame_id = "map"; //our fixed frame
@@ -37,7 +57,7 @@ int main( int argc, char** argv )
 	marker.scale.z = 0.01;
 
 	// Set the color -- be sure to set alpha to something non-zero!
-	marker.color.r = 0.0f;
+	marker.color.r = 1.0f;
 	marker.color.g = 0.0f;
 	marker.color.b = 1.0f;
 	marker.color.a = 1.0;
@@ -50,7 +70,7 @@ int main( int argc, char** argv )
 
 		// Set the marker action.  Options are ADD, DELETE, and new in ROS Indigo: 3 (DELETEALL)
 		marker.action = visualization_msgs::Marker::ADD;
-		ROS_INFO("Marker Added");
+		ROS_INFO("Marker has been Added");
 		marker.lifetime = ros::Duration();
 
 		// Publishishing marker
@@ -126,4 +146,5 @@ int main( int argc, char** argv )
 		
 		r.sleep();
 	}  // end of while
+// } //end of else
 }
