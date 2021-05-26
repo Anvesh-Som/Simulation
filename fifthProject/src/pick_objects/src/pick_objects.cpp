@@ -16,6 +16,7 @@ int main(int argc, char** argv)
 	ros::NodeHandle nh;
 	nh.setParam("is_at_1st_pose", false);
 	nh.setParam("is_at_2nd_pose", false);
+	nh.setParam("pickup_started", false);
 
 	// tell the action client "move_base" that we want to spin a thread by default
 	MoveBaseClient ac("move_base", true);
@@ -41,6 +42,7 @@ int main(int argc, char** argv)
 	// Send the goal position and orientation for the robot to reach
 	ROS_INFO("pick-up pose sent");
 	ac.sendGoal(goal);
+	nh.setParam("pickup_started",true);
 
 	// Wait an infinite time for the results
 	ac.waitForResult();
