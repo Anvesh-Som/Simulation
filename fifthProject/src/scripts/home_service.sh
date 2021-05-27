@@ -19,7 +19,7 @@ export TURTLEBOT_MAP_FILE="$(rospack find map)/map.yaml"
 
 
 
-
+sleep 1
 xterm  -e  "roslaunch turtlebot3_gazebo turtlebot3_udacity_world.launch" &
 sleep 5
 
