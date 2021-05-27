@@ -83,7 +83,6 @@ $ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:/home/path_to_build_directory/
 * `pick_objects` package contains the pick_objects node which sends two goals (pose) for robot to travel to by path planning and it is synced with add_markers node to add and delete package accordingly to make it look like robot picked up the virtual object.
 * 
 ## NOTE:- 
-* Please change paths from `/home/anvesh/simulation_ws` to your `catkin_workspace` in all scripts and launch files because they were aked to be kept outside packages (example maps folder) could not be given a general path by find command.
 * In case you are getting error related to dependencies, try to use `rosdep`
 * Do not use original turtlebot packages, the one in repository are modified and must be used only.
 
