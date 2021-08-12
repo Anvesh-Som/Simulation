@@ -24,4 +24,4 @@ sleep 5
 
 # teleop: operating robot using keyboard
 xterm -e "source simulation_ws/devel/setup.bash;
-roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch"
+roslaunch qwerty turtlebot3_teleop turtlebot3_teleop_key.launch"
